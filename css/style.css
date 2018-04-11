@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.ContainerNav {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  background: #330867;
+}
+
+.nav-container {
+  width: 50%;
+  height: 100%;
+  margin: 0px auto;
+  /*     background: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.nav-item {
+  flex: 1;
+  height: 100%;
+  /*   background: gray; */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: #330867;
+  width: 100%;
+  animation: bobbySnuggles;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.subnav li {
+  padding: 5px;
+  /*   margin: 10px; */
+}
+
+.nav-item.has-subnav:hover .subnav {
+  display: inherit;
+}
+
+.nav-item.has-subnav {
+  position: relative;
+}
+
+@keyframes bobbySnuggles {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+/*   height: 100vh; */
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-card {
+  padding: 10px;
+  margin: 5px;
+  border: 0px;
+  border-color: white;
+  color: #fff7db;
+  height: 300px;
+  width: 220px;
+  animation: fadeUpIn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-1 {
+  background: url("https://i.pinimg.com/originals/03/21/ee/0321ee048bfe7b54adc03a9d033fce1e.jpg");
+  background-size: 100vh;
+}
+
+.box-2 {
+  background: url("https://i1.wp.com/posterspy.com/wp-content/uploads/2017/07/BabyDriver_n.jpg");
+  background-size: 150%;
+}
+
+.box-3 {
+  background: url("http://s1.1zoom.me/big0/907/Kong_Skull_Island_Men_Canine_tooth_fangs_Monkeys_523511_682x1024.jpg");
+  background-size: 150%;
+}
+
+.box-4 {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR011XV0OhlKgbhjDQIEcpUq2E0fl836woU-R6dBBOJlOZ_BiA3");
+  background-size: 120%;
+}
+
+.box-5 {
+  background: url("http://s1.1zoom.me/big0/725/Captain_America_The_Winter_Soldier_Captain_America_531916_734x1024.jpg");
+  background-size: 150%;
+}
+
+.box-6 {
+  background: url("http://s.filmonline.online/uploads/posts/2017-08/1504161041-328845404-ono.jpg");
+  background-size: 150%;
+  
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-5,
+.box-6 {
+/*   background-size: cover; */
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.movie-card:hover {
+  box-shadow: 0 0 50px silver;
+  background-size: 200%;
+  background-position-x: 1%;
+  background-position-y: 1%;
+}
+
+.movie-details {
+  position: absolute;
+  bottom: 2.5em;
+  opacity: 0.5;
+}
+
+.movie-card:hover .movie-details {
+  opacity: 1;
+}
+
+.movie-card:active {
+  transform: translateY(10px);
+}
+
+@keyframes fadeUpIn {
+  0% {
+    bakcground-position: 10px;
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
